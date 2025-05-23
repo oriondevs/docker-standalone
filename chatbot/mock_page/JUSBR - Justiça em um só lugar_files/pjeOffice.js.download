@@ -1,0 +1,81 @@
+var PJeOffice = {};
+
+PJeOffice.stringify = function (value) {
+	var _json_stringify = JSON.stringify;	
+    var _array_tojson = Array.prototype.toJSON;
+    delete Array.prototype.toJSON;
+    var r=_json_stringify(value);
+    Array.prototype.toJSON = _array_tojson;
+    return r;
+};
+
+PJeOffice.executar = function(requisicao, onSucesso, onErro, onIndisponivel) {
+	
+	var t = requisicao.tarefa;
+	var token = t.token;
+	
+	requisicao.tarefa = PJeOffice.stringify(t);
+	
+	var r = PJeOffice.stringify(requisicao);
+	r = encodeURIComponent(r);
+	
+	var image = new Image();
+	image.onload = function(token) {
+		if (this.width == 2) {
+			onErro();
+		}
+		else {
+			onSucesso(token);
+		}
+	}
+	image.onerror = onIndisponivel;
+	image.src = "http://localhost:8800/pjeOffice/requisicao/?r=" + r + "&u=" + new Date().getTime();
+	
+}
+
+function uuidv4() {
+  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+  );
+}
+
+PJeOffice.verificarDisponibilidade = function(onDisponivel, onIndisponivel) {	
+	
+	var image = new Image();
+	
+	image.onload = onDisponivel;
+	image.onerror = onIndisponivel;	
+	image.src = "http://localhost:8800/pjeOffice/?&u=" + new Date().getTime();
+}
+
+function autenticar(codigoSeguranca) {
+	const urlParams = new URLSearchParams(window.location.search);
+	var mensagem = Math.random().toString(36);
+	var token = uuidv4();
+	
+	PJeOffice.executar(
+		{
+			"sessao" 			: document.cookie,
+			"aplicacao"			: "PJe",
+			"servidor"  		: window.location.origin + "/auth/realms/pje",
+			"codigoSeguranca"	: codigoSeguranca,
+			"tarefaId"			: "sso.autenticador",
+			"tarefa"			: {
+				"enviarPara"	: "/pjeoffice-rest",
+				"mensagem"		: mensagem,
+				"token"         : token
+			}
+		},
+		function (uuid) {
+			document.getElementById('pjeoffice-code').value = token;
+			document.getElementById('phrase').value = mensagem;
+			document.forms[0].submit();
+		},
+		function () {
+			alert("Ocorreu um erro tente novamente.");
+		},
+		function () {
+			alert("Não foi possível encontrar o PJe Office.");
+		}
+	);				
+};

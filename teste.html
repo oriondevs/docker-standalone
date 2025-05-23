@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Place this tag where you want the Live Helper Plugin to render. -->
+    <div id="lhc_status_container_page"></div>
+
+    <!-- Place this tag after the Live Helper Plugin tag. -->
+    <script type="text/javascript">
+        var LHCChatOptionsPage = { 'height': 700, 'mobile': false };
+        LHCChatOptionsPage.opt = {};
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            var referrer = (document.referrer) ? encodeURIComponent(document.referrer.substr(document.referrer.indexOf('://') + 1)) : '';
+            var location = (document.location) ? encodeURIComponent(window.location.href.substring(window.location.protocol.length)) : '';
+            po.src = '//localhost:8081/chat/getstatusembed/(department)/1?r=' + referrer + '&l=' + location;
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+
+</body>
+
+</html>

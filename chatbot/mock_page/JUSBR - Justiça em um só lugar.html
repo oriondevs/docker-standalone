@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0192)https://sso.cloud.pje.jus.br/auth/realms/pje/protocol/openid-connect/auth?client_id=jusbr&scope=openid&redirect_uri=https://www.jus.br&response_type=code&state=2485a11d66c6ab8a05dca80845b1bea1 -->
+<html xmlns="http://www.w3.org/1999/xhtml" class=""><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="robots" content="noindex, nofollow">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://sso.cloud.pje.jus.br/auth/resources/pak3w/common/keycloak/img/i180.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://sso.cloud.pje.jus.br/auth/resources/pak3w/common/keycloak/img/i32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://sso.cloud.pje.jus.br/auth/resources/pak3w/common/keycloak/img/i16.png">
+      <title>JUSBR - Justiça em um só lugar</title>
+      <link rel="icon" href="https://sso.cloud.pje.jus.br/auth/resources/pak3w/login/pdpj-jusbr/img/favicon.ico">
+      <link href="./JUSBR - Justiça em um só lugar_files/styles.css" rel="stylesheet">
+      <link href="./JUSBR - Justiça em um só lugar_files/bootstrap.min.css" rel="stylesheet">
+      <link href="./JUSBR - Justiça em um só lugar_files/all.min.css" rel="stylesheet">
+      <link href="./JUSBR - Justiça em um só lugar_files/custom.css" rel="stylesheet">
+      <link href="./JUSBR - Justiça em um só lugar_files/uikit.css" rel="stylesheet">
+      <link href="./JUSBR - Justiça em um só lugar_files/fonts.css" rel="stylesheet">
+      <script src="./JUSBR - Justiça em um só lugar_files/pjeOffice.js.download" type="text/javascript"></script>
+   </head>
+   <body class="kc-body">
+      <!-- Chatbot -->
+<style>
+   #chat-float {
+     position: fixed;
+     bottom: 10px;
+     right: 32px;
+     z-index: 9999;
+     background: #0078d4;
+     width: 64px;
+     height: 64px;
+     border-radius: 50%;
+     box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+     transition: opacity 0.2s, transform 0.2s;
+     opacity: 1;
+     transform: scale(1);
+   }
+   #chat-float.hide {
+     opacity: 0;
+     pointer-events: none;
+     transform: scale(0.7);
+   }
+   #chat-float svg {
+     width: 32px;
+     height: 32px;
+     fill: #fff;
+   }
+   #chat-float:hover {
+     background: #005fa3;
+   }
+   /* Modal do chat */
+   #chat-modal-bg {
+     display: none;
+     position: fixed;
+     z-index: 10000;
+     left: 0; top: 0; right: 0; bottom: 0;
+     background: rgba(0,0,0,0.3);
+     align-items: flex-end;
+     justify-content: flex-end;
+     animation: fadeInBg 0.2s;
+   }
+   #chat-modal-bg.show {
+     display: flex;
+     animation: fadeInBg 0.2s;
+   }
+   @keyframes fadeInBg {
+     from { opacity: 0; }
+     to { opacity: 1; }
+   }
+   #chat-modal {
+     margin: 0 10px 10px 0;
+     background: #fff;
+     border-radius: 12px;
+     box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+     width: 350px;
+     max-width: 95vw;
+     height: 500px;
+     max-height: 90vh;
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     animation: fadeIn 0.2s;
+   }
+   @keyframes fadeIn {
+     from { transform: translateY(40px); opacity: 0; }
+     to { transform: translateY(0); opacity: 1; }
+   }
+   #chat-modal-header {
+     background: #0078d4;
+     color: #fff;
+     padding: 16px;
+     border-radius: 12px 12px 0 0;
+     font-weight: bold;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+   #chat-modal-close {
+     background: none;
+     border: none;
+     color: #fff;
+     font-size: 20px;
+     cursor: pointer;
+   }
+   #chat-modal-messages {
+     flex: 1;
+     padding: 16px;
+     overflow-y: auto;
+     background: #f7f7f7;
+     font-size: 15px;
+   }
+   #chat-modal-input {
+     display: flex;
+     border-top: 1px solid #eee;
+     padding: 12px;
+     background: #fafbfc;
+     border-radius: 0 0 12px 12px;
+   }
+   #chat-modal-input input {
+     flex: 1;
+     border: 1px solid #ccc;
+     border-radius: 6px;
+     padding: 8px;
+     font-size: 15px;
+     outline: none;
+   }
+   #chat-modal-input button {
+     background: #0078d4;
+     color: #fff;
+     border: none;
+     border-radius: 6px;
+     margin-left: 8px;
+     padding: 8px 16px;
+     font-size: 15px;
+     cursor: pointer;
+     transition: background 0.2s;
+   }
+   #chat-modal-input button:hover {
+     background: #005fa3;
+   }
+   .chat-msg {
+     margin-bottom: 10px;
+     line-height: 1.4;
+   }
+   .chat-msg.user {
+     text-align: right;
+     color: #0078d4;
+   }
+   .chat-msg.bot {
+     text-align: left;
+     color: #222;
+   }
+   /* Estilos para feedback */
+   .chat-feedback {
+     display: flex;
+     justify-content: flex-end;
+     gap: 8px;
+     margin-top: 4px;
+     opacity: 0.7;
+     transition: opacity 0.2s;
+   }
+   .chat-feedback:hover {
+     opacity: 1;
+   }
+   .chat-feedback button {
+     background: none;
+     border: none;
+     cursor: pointer;
+     padding: 4px;
+     border-radius: 4px;
+     transition: background 0.2s;
+   }
+   .chat-feedback button:hover {
+     background: rgba(0,0,0,0.1);
+   }
+   .chat-feedback button.active {
+     color: #0078d4;
+   }
+   .chat-feedback button svg {
+     width: 16px;
+     height: 16px;
+     fill: currentColor;
+   }
+ </style>
+ <div id="chat-float" title="Fale com o Chatbot CNJ">
+   <svg viewBox="0 0 24 24">
+     <path d="M12 3C6.48 3 2 6.92 2 12c0 2.08.8 3.97 2.13 5.47L2 21l3.66-1.1C7.6 20.28 9.72 21 12 21c5.52 0 10-3.92 10-9s-4.48-9-10-9zm0 16c-2.01 0-3.87-.62-5.36-1.68l-.38-.27-2.18.65.66-2.13-.25-.36C4.14 15.01 4 13.53 4 12c0-4.08 3.58-7 8-7s8 2.92 8 7-3.58 7-8 7z"/>
+     <circle cx="8.5" cy="12" r="1.5"/>
+     <circle cx="12" cy="12" r="1.5"/>
+     <circle cx="15.5" cy="12" r="1.5"/>
+   </svg>
+ </div>
+ <!-- Modal do Chatbot -->
+ <div id="chat-modal-bg">
+   <div id="chat-modal">
+     <div id="chat-modal-header">
+       Chatbot CNJ
+       <button id="chat-modal-close" title="Fechar">&times;</button>
+     </div>
+     <div id="chat-modal-messages">
+       <div class="chat-msg bot">Olá! Como posso ajudar você?</div>
+     </div>
+     <form id="chat-modal-input">
+       <input type="text" id="chat-input" placeholder="Digite sua mensagem..." autocomplete="off" required />
+       <button type="submit">Enviar</button>
+     </form>
+   </div>
+ </div>
+ <script>
+   // Abrir modal ao clicar no balão
+   document.getElementById('chat-float').onclick = function() {
+     var btn = document.getElementById('chat-float');
+     var modalBg = document.getElementById('chat-modal-bg');
+     btn.classList.add('hide');
+     setTimeout(function() {
+       modalBg.classList.add('show');
+       document.getElementById('chat-input').focus();
+     }, 200);
+   };
+   // Fechar modal
+   document.getElementById('chat-modal-close').onclick = function() {
+     var btn = document.getElementById('chat-float');
+     var modalBg = document.getElementById('chat-modal-bg');
+     modalBg.classList.remove('show');
+     setTimeout(function() {
+       btn.classList.remove('hide');
+     }, 200);
+   };
+   // Enviar mensagem
+   document.getElementById('chat-modal-input').onsubmit = async function(e) {
+     e.preventDefault();
+     var input = document.getElementById('chat-input');
+     var msg = input.value.trim();
+     if (!msg) return;
+     var messages = document.getElementById('chat-modal-messages');
+     
+     // Adiciona mensagem do usuário
+     var userMsg = document.createElement('div');
+     userMsg.className = 'chat-msg user';
+     userMsg.textContent = msg;
+     messages.appendChild(userMsg);
+     messages.scrollTop = messages.scrollHeight;
+     input.value = '';
+     
+     // Mostra indicador de carregando
+     var botMsg = document.createElement('div');
+     botMsg.className = 'chat-msg bot';
+     botMsg.textContent = '...';
+     messages.appendChild(botMsg);
+     messages.scrollTop = messages.scrollHeight;
+
+     try {
+       // Chamada real para a API do chatbot
+       const response = await fetch('http://localhost:8000/chat', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({ message: msg })
+       });
+       const data = await response.json();
+       botMsg.textContent = data.response || 'Desculpe, não entendi sua mensagem.';
+       
+       // Adiciona botões de feedback
+       const feedbackDiv = document.createElement('div');
+       feedbackDiv.className = 'chat-feedback';
+       feedbackDiv.innerHTML = `
+         <button title="Feedback positivo" onclick="sendFeedback('${data.question_id}', '${data.response_id}', 1, this)">
+           <svg viewBox="0 0 24 24">
+             <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
+           </svg>
+         </button>
+         <button title="Feedback negativo" onclick="sendFeedback('${data.question_id}', '${data.response_id}', 0, this)">
+           <svg viewBox="0 0 24 24">
+             <path d="M15 3H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 23l6.59-6.59c.36-.36.58-.86.58-1.41V5c0-1.1-.9-2-2-2zm4 0v12h4V3h-4z"/>
+           </svg>
+         </button>
+       `;
+       botMsg.appendChild(feedbackDiv);
+     } catch (err) {
+       botMsg.textContent = 'Erro ao conectar ao servidor.';
+     }
+     messages.scrollTop = messages.scrollHeight;
+   };
+
+   // Função para enviar feedback
+   async function sendFeedback(questionId, responseId, rating, button) {
+     // Encontra o container de feedback específico desta mensagem
+     const feedbackContainer = button.closest('.chat-feedback');
+     // Desabilita apenas os botões deste container
+     const buttons = feedbackContainer.querySelectorAll('button');
+     buttons.forEach(btn => {
+       btn.disabled = true;
+       btn.style.opacity = '0.5';
+       btn.style.cursor = 'not-allowed';
+     });
+
+     try {
+       const response = await fetch('http://localhost:8000/feedback', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify({
+           question_id: questionId,
+           response_id: responseId,
+           rating: rating
+         })
+       });
+       
+       const data = await response.json();
+       if (data.success) {
+         // Atualiza o visual apenas dos botões deste container
+         buttons.forEach(btn => btn.classList.remove('active'));
+         button.classList.add('active');
+       } else {
+         // Se houver erro, reabilita apenas os botões deste container
+         buttons.forEach(btn => {
+           btn.disabled = false;
+           btn.style.opacity = '';
+           btn.style.cursor = '';
+         });
+       }
+     } catch (err) {
+       console.error('Erro ao enviar feedback:', err);
+       // Em caso de erro, reabilita apenas os botões deste container
+       buttons.forEach(btn => {
+         btn.disabled = false;
+         btn.style.opacity = '';
+         btn.style.cursor = '';
+       });
+     }
+   }
+ </script>
+    <!-- Chatbot -->
+      <uikit-header _ngcontent-ikx-c1="" _nghost-ikx-c9="">
+         <mat-toolbar _ngcontent-ikx-c9="" class="mat-toolbar mat-toolbar-single-row">
+            <span _ngcontent-ikx-c9="" class="logotipo">
+               <a _ngcontent-ikx-c9="" href="https://sso.cloud.pje.jus.br/auth/realms/pje/protocol/openid-connect/auth?client_id=jusbr&amp;scope=openid&amp;redirect_uri=https://www.jus.br&amp;response_type=code&amp;state=2485a11d66c6ab8a05dca80845b1bea1#" tabindex="1">
+                  <div _ngcontent-ikx-c9="" class="logomobile is-mobile"></div>
+                  <div _ngcontent-ikx-c9="" class="logodesk is-desktop"></div>
+               </a>
+            </span>
+            <span _ngcontent-ikx-c9="" class="header-nav">
+               <uikit-accessibility _ngcontent-ikx-c9="" _nghost-ikx-c20="">
+                  <mat-menu _ngcontent-ikx-c20="" class="ng-tns-c22-0">
+                  </mat-menu>
+                  <button _ngcontent-ikx-c20="" aria-haspopup="true" aria-label="Acessibilidade" class="mat-focus-indicator mat-menu-trigger mat-tooltip-trigger mat-icon-button mat-button-base mat-primary" color="primary" mat-icon-button="" mattooltip="Acessibilidade" tabindex="5">
+                     <span class="mat-button-wrapper">
+                        <mat-icon _ngcontent-ikx-c20="" class="fa-2x fas fa-universal-access acessibility mat-icon notranslate material-icons mat-icon-no-color" role="img" aria-hidden="true" data-mat-icon-type="font"></mat-icon>
+                     </span>
+                     <span class="mat-button-ripple mat-ripple mat-button-ripple-round" matripple=""></span><span class="mat-button-focus-overlay"></span>
+                  </button>
+               </uikit-accessibility>
+            </span>
+         </mat-toolbar>
+      </uikit-header>
+      <div class="kc-login">
+         <div id="kc-main" class="row">
+            <div class="kc-banner col-md-8">
+               <img src="./JUSBR - Justiça em um só lugar_files/banner.png" style="width: 100%;">
+            </div>
+            <div class="kc-form-card  col-md-4 ">
+               <header class="kc-form-header text-center">
+                  <h2>Você está se autenticando em  Portal Jus.br</h2>
+               </header>
+               <div id="kc-content">
+                  <div id="kc-content-wrapper">
+<div id="kc-form" class="">
+      <div id="kc-form-wrapper" class=" ">
+                     <script type="text/javascript">
+                        function isUserName(obj) {
+                           if (obj.search(/[^a-zA-Z].[^a-zA-Z]+/) === -1) {
+                              return true;
+                           } else {
+                              return false;
+                           }
+
+                        }
+
+                        function onSubmit() {
+                           var usernameField = document.getElementById("username");
+                           if (isUserName(usernameField.value)) {
+
+                              var username = usernameField.value.replaceAll("/", "").replaceAll("-", "").replaceAll(".", "");
+                              if (username.length > 11) {
+                                    usernameField.value = username.substring(0, 14);
+                              } else {
+                                    usernameField.value = username.substring(0, 11);
+                              }
+                           }
+                        //    login.disabled = true;
+                           return true;
+                        }
+                     </script>
+                     <form id="kc-form-login" onsubmit="login.disabled = true; return true;" action="https://sso.cloud.pje.jus.br/auth/realms/pje/login-actions/authenticate?session_code=U58uMj6W2ni9kG8Ry4B6Nh7JfHm0yb2nRKdykpWiM9U&amp;execution=a859731d-33b4-4090-8b71-c6187fbbf04c&amp;client_id=jusbr&amp;tab_id=Z4BIxvYZ7hE" method="post">
+                        <div class="container">
+                           <div class="row">
+                              <div class="form-wrapper">
+                                    <div class="mat-input-element">
+                                       <span class="mat-form-field-label-wrapper">
+                                          <label class="mat-form-field-label" id="username-label" for="username" aria-owns="mat-input-1">
+                                          CPF/CNPJ
+                                          </label>
+                                       </span>
+                                       <input tabindex="1" id="username" class="form-control" name="username" placeholder="000.000.000-00" type="text" autofocus="" autocomplete="off">
+                                    </div>
+                                 <div class="mat-input-element">
+                                    <span class="mat-form-field-label-wrapper">
+                                    <label class="mat-form-field-label" id="password-label" for="password" aria-owns="mat-input-1">
+                                    Senha
+                                    </label>
+                                    </span>
+                                    <input tabindex="2" id="password" class="form-control" name="password" placeholder="Digite sua senha" type="password" autocomplete="off">
+                                 </div>
+                                 <div class=" ">
+                                    <div id="kc-form-options">
+                                    </div>
+                                    <div class="div-esqueci-senha">
+                                    </div>
+                                 </div>
+                                 <div id="kc-form-buttons" class="">
+                                    <input type="hidden" id="id-hidden-input" name="credentialId">
+                                    <input tabindex="4" class="btn btn-primary btn-block " name="login" id="kc-login" type="submit" value="Entrar">
+                                    <input type="hidden" id="pjeoffice-code" name="pjeoffice-code" value="">
+                                    <input type="hidden" id="phrase" name="phrase" value="">
+                                 </div>
+                                 <div id="outrasopcoes">
+                                    Outras opções de acesso
+                                 </div>
+                                 <div class=" ">
+                                    <a href="https://sso.cloud.pje.jus.br/auth/realms/pje/broker/acessogovbr/login?client_id=jusbr&amp;tab_id=Z4BIxvYZ7hE&amp;session_code=U58uMj6W2ni9kG8Ry4B6Nh7JfHm0yb2nRKdykpWiM9U" class="br-sign-in block">Entrar com&nbsp;<img src="./JUSBR - Justiça em um só lugar_files/govbr-colorido-b.png" alt="gov.br"></a>
+                                 </div>
+                                 <div class="certificado">
+                                    <a href="https://sso.cloud.pje.jus.br/auth/realms/pje/protocol/openid-connect/auth?client_id=jusbr&amp;scope=openid&amp;redirect_uri=https://www.jus.br&amp;response_type=code&amp;state=2485a11d66c6ab8a05dca80845b1bea1#" onclick="autenticar(&#39;Y8fHLWlTEgLBexS0Bjn4PAZ5xxq+Nerd4aL9DdmlzdouGeQkC8ilZonyqLCip+2AHyXWV0axUz2l1SZ80p0V9xQvOrr2l9tWww9OdUuJm+3FTbfJx3cAiILseaQS03KG5zSd1AO2lvVJ4OhckXP48LW19diSZQbOMRRYbcXKD2/7bmadLlH7B585f39Chceye4eKRqmgECCgBClQoxl0Wy0UBitHfHATtgH2EbUIcD02xm9r/OzDXGfZibugKd0WubdKnvDeEZZlKicgQdUoASHyKpFA2xcs6FYG2Pbew8M5DXVfsbf/5p77GPStlCCFRhTS8TLNeE2dNkRnCpW8lQ==&#39;);">
+                                       <span class="botao-certificado-icon">
+                                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" id="footer-sample-full" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify iconify--bi">
+                                             <path fill="currentColor" d="M6 .5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4H6v-4ZM7 1v1h1V1H7Zm2 0v1h1V1H9ZM5.5 5a.5.5 0 0 0-.5.5V15a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V5.5a.5.5 0 0 0-.5-.5h-6Z"></path>
+                                          </svg>
+                                       </span>
+                                       <span class="botao-certificado-titulo">Seu certificado digital</span>
+                                    </a>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </form>
+      </div>
+</div>
+
+                  </div>
+
+                                    <div id="mensagem">
+                                       <div id="kc-info" class="">
+                                          <div id="kc-info-wrapper" class="">
+                                          </div>
+                                       </div>
+                                    </div>
+            
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="footer-nota" class="col-md-12">
+         <span class="suporte">Precisa de ajuda? Entre em contato com o suporte no endereço eletrônico: <a target="_blank" href="https://suporteti.cnj.jus.br/">https://suporteti.cnj.jus.br</a></span>
+         <span class="suporte">© <span id="current-year">2025</span> - Conselho Nacional de Justiça | Todos os direitos reservados </span>
+      </div>
+      <script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			document.getElementById("current-year").innerHTML = new Date().getFullYear();
+		});
+      </script>
+   
+
+</body></html>

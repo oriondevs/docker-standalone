@@ -1,0 +1,24 @@
+[project]
+name = "desafio-cnj"
+version = "0.1.0"
+description = "A simple chatbot using ChatterBot"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "chatterbot>=1.0.4",
+    "chatterbot-corpus>=1.2.0",
+    "spacy>=3.7.2",
+    "numpy==1.26.4",
+    "pytz",
+    "sqlalchemy>=2.0.0",
+    "pyyaml>=6.0.1",
+    "pip>=25.1.1",
+    "nltk>=3.9.1",
+    "fastapi>=0.115.12",
+    "uvicorn>=0.34.2",
+    "pydantic>=2.11.4",
+    "python-dotenv>=1.0.0",
+    "dotenv>=0.9.9",
+    "pymongo>=4.12.1",
+    "redis>=6.0.0",
+]

@@ -1,0 +1,594 @@
+html, body {
+   height: auto; min-height: auto;
+}
+
+.kc-body {
+    background: #ebf0f3;
+}
+
+.kc-login {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#kc-header {
+    background-color: #000;
+    background-image: url(../img/logo-pdpj-1.jpeg) 0 left no-repeat;
+    height: 80px;
+    flex-shrink: 0;
+}
+
+#kc-header .pdpj-logo {
+    height: 150px;
+    position: absolute;
+    top: -36px;
+    left: -10px;
+}
+
+#kc-header #kc-header-wrapper { /* apagar se não for texto no cabeçalho */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    font-size: 1em;
+}
+
+#kc-main {
+    flex: 1 0 0;
+}
+
+#kc-footer {
+    background-color: #fff;
+    border-top: 2px solid #000;
+    height: 30px;
+    flex-shrink: 0;
+}
+#mensagem {
+    color: #555;
+    /* border-bottom: 1px solid #939393; */
+    width: 100%;
+    padding: 0;
+    margin: 1em 0;
+    font-size: 0.9em;
+    clear: both;
+}
+.kc-form-header {
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cnj-logo {
+    height: 45px;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-left: 15px
+}
+
+.pdpj-logo {
+    height: 120px;
+    margin-bottom: 15px;
+    margin-left: 0;
+}
+
+.kc-form-card {
+    margin-top: 0.3%;
+}
+
+div.container {
+    padding: 0;
+}
+
+#kc-form {
+    display: flex;
+}
+
+#kc-form>div {
+    flex-grow: 1;
+}
+
+/*.btn.btn-primary {*/
+/*    color: #fff;*/
+/*    border: 0px solid transparent;*/
+/*    background: #f26529;*/
+/*    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.239216) 0px 1px 4px;*/
+/*    transition: all .4s ease-in-out;*/
+/*}*/
+
+/*.btn.btn-primary:hover {*/
+/*    background: #fb753b;*/
+/*}*/
+
+#kc-login {
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    font-weight: bold !important;
+    font-size: 0.8rem !important;
+    width: 45%;
+    float: right;
+        background: #274cc8;
+        padding: 0.4em 1.5em;
+}
+
+#kc-content {
+    width: 100%;
+}
+
+#kc-content-wrapper {
+    border: 1px solid #000;
+    margin-top: 10px;
+    width: 50%;
+    min-width: 510px;
+    background: #ffffff;
+    border: #ccc solid 1px;
+    box-shadow: 0 0 0.5em #bbb;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+#kc-content-wrapper .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+   padding: 0.4em;
+      font-size: 0.9em;
+      margin-bottom: 0.5em;
+}
+
+#kc-content-wrapper .form-control:focus {
+    border: 1px solid #999;
+    box-shadow: unset; /* 0 0 0 .2rem #eee; */ /*#e9bdab;*/ /* rgba(0,123,255,.25)*/
+    z-index: 2;
+}
+
+#kc-content-wrapper input[type="password"], #kc-content-wrapper input[type="text"] {
+    margin-bottom: 15px;
+}
+
+@media (min-width: 770px) {
+
+    .div-login {
+        border-right: 1px solid;
+        color: #CCC;
+    }
+
+    .div-login:after {
+        content: "ou";
+        position: absolute;
+        background: #fff;
+        color: #777;
+        border-radius: 100%;
+        padding: 6px;
+        font-size: 14px;
+        top: 50%;
+        margin: -16.5px;
+        border: none;
+    }
+}
+
+@media (max-width: 770px) {
+
+    div.div-direita {
+        border-top: 1px solid #CCC;
+        padding-top: 30px;
+        margin-top: 30px; 
+    }
+
+    #kc-content-wrapper {
+        width: 80%;
+    }
+}
+
+.div-login:after {
+    right: 0;
+}
+
+.botao-certificado {
+    float: left;
+    color: #fff;
+    width: 100%;
+    text-transform: uppercase;
+    border: none;
+    padding: 0 0 0 0 !important;
+    font-size: 13px;
+    background: #f26529;
+    min-height: 45px;
+    font-weight: bold;
+}
+
+.botao-certificado:hover {
+    background: #D95B25;
+}
+
+.botao-certificado-icon {
+    width: 15%;
+    height: 100%;
+    float: left;
+    padding: 1%;
+}
+
+.botao-certificado-titulo {
+    width: 85%;
+    float: left;
+}
+
+.form-wrapper{
+    padding: 10px 0 10px 0;
+}
+
+.botao-entrar {
+    text-transform: uppercase;
+    font-size: 1.0rem;
+}
+
+.btn.btn-primary {
+    color: #fff;
+    background: #f26529;
+}
+
+.btn.btn-primary:hover {
+    background: #D95B25;
+}
+
+/**
+
+    background: #274cc8;
+    padding: 0.4em 1.5em;
+**/
+
+
+
+.btn {
+    padding: 4px 16px;
+    font-size: 13px;
+    line-height: 1.846
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+.btn.btn-primary{
+    text-transform: uppercase;
+    font-size: 1.0rem !important;
+    font-weight: bold !important;
+    background: #274cc8;
+
+    width: 45%;
+    float: right;
+    color:#fff;
+    border: 0px solid transparent;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.239216) 0px 1px 4px;
+    transition: all .4s ease-in-out;
+}
+
+.btn.btn-primary:hover{
+    background: #0069d9;
+}
+
+.btn.btn-default{
+    color: #000000;;
+    border: 0px solid transparent;
+    background:  #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.239216) 0px 1px 4px;
+    transition: all .4s ease-in-out;
+}
+
+.btn.btn-default:hover{
+    background: #ebf0f3;
+}
+
+#kc-social-providers {
+    margin-top: 30px;
+}
+
+#kc-social-providers li, #kc-social-providers div {
+    text-align: left;
+}
+
+#kc-social-providers div {
+    margin-left: 22px;
+}
+
+#kc-form-options label {
+    margin-bottom: 0;
+}
+
+.div-esqueci-senha {
+    float: left;
+    margin-bottom: 20px;
+}
+
+#kc-form-options, .div-esqueci-senha {
+    text-align: left;
+}
+
+#kc-content-wrapper div.alert {
+    padding: 0;
+    margin: 0;
+}
+
+.kc-feedback-text {
+    display: block;
+    border: 1px solid #f00;
+    width: 100%;
+    padding: 10px;
+    font-size: 0.7em;
+    margin: 0;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.kc-form-footer {
+    text-align: center;
+}
+
+.kc-form-footer {
+    margin-top: 15px;
+}
+
+.kc-form-footer .suporte {
+    font-size: 0.7em;
+}
+.br-sign-in,
+.br-button.sign-in {
+    --button-radius: 100em;
+    --button-xsmall: 24px;
+    --button-small: 32px;
+    --button-medium: 40px;
+    --button-large: 48px;
+    --button-size: var(--button-medium);
+    align-items: center;
+    background-color: transparent;
+    border: 0;
+    border-radius: var(--button-radius);
+    color: var(--interactive);
+    cursor: pointer;
+    display: inline-flex;
+    font-size: var(--font-size-scale-up-01);
+    font-weight: var(--font-weight-semi-bold);
+    height: var(--button-size);
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 var(--spacing-scale-3x);
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    width: auto;
+    --background: var(--gray-2);
+    --sign-in-img: 20px;
+    background-color: var(--background);
+    padding: 0 var(--spacing-scale-2x);
+}
+.br-sign-in.block,
+.br-button.sign-in.block {
+    width: 100%;
+}
+@media (min-width: 576px) {
+    .br-sign-in.block-sm,
+    .br-button.sign-in.block-sm {
+        width: 100%;
+    }
+    .br-sign-in.auto-sm,
+    .br-button.sign-in.auto-sm {
+        width: auto;
+    }
+}
+@media (min-width: 992px) {
+    .br-sign-in.block-md,
+    .br-button.sign-in.block-md {
+        width: 100%;
+    }
+    .br-sign-in.auto-md,
+    .br-button.sign-in.auto-md {
+        width: auto;
+    }
+}
+@media (min-width: 1280px) {
+    .br-sign-in.block-lg,
+    .br-button.sign-in.block-lg {
+        width: 100%;
+    }
+    .br-sign-in.auto-lg,
+    .br-button.sign-in.auto-lg {
+        width: auto;
+    }
+}
+@media (min-width: 1600px) {
+    .br-sign-in.block-xl,
+    .br-button.sign-in.block-xl {
+        width: 100%;
+    }
+    .br-sign-in.auto-xl,
+    .br-button.sign-in.auto-xl {
+        width: auto;
+    }
+}
+.br-sign-in.circle, .br-sign-in[circle], .br-sign-in.is-circle,
+.br-button.sign-in.circle,
+.br-button.sign-in[circle],
+.br-button.sign-in.is-circle {
+    border-radius: 50%;
+    padding: 0;
+    width: var(--button-size);
+}
+.br-sign-in.xsmall, .br-sign-in[xsmall], .br-sign-in.is-xsmall,
+.br-button.sign-in.xsmall,
+.br-button.sign-in[xsmall],
+.br-button.sign-in.is-xsmall {
+    --button-size: var(--button-xsmall);
+}
+.br-sign-in.small, .br-sign-in[small], .br-sign-in.is-small,
+.br-button.sign-in.small,
+.br-button.sign-in[small],
+.br-button.sign-in.is-small {
+    --button-size: var(--button-small);
+}
+.br-sign-in.medium, .br-sign-in[medium], .br-sign-in.is-medium,
+.br-button.sign-in.medium,
+.br-button.sign-in[medium],
+.br-button.sign-in.is-medium {
+    --button-size: var(--button-medium);
+}
+.br-sign-in.large, .br-sign-in[large], .br-sign-in.is-large,
+.br-button.sign-in.large,
+.br-button.sign-in[large],
+.br-button.sign-in.is-large {
+    --button-size: var(--button-large);
+}
+.br-sign-in.primary, .br-sign-in[primary], .br-sign-in.is-primary,
+.br-button.sign-in.primary,
+.br-button.sign-in[primary],
+.br-button.sign-in.is-primary {
+    --hover: var(--surface-opacity-sm);
+    --pressed: var(--surface-opacity-lg);
+    background-color: var(--interactive);
+    color: var(--background);
+}
+.br-sign-in.secondary, .br-sign-in[secondary], .br-sign-in.is-secondary,
+.br-button.sign-in.secondary,
+.br-button.sign-in[secondary],
+.br-button.sign-in.is-secondary {
+    border: 1px solid var(--interactive);
+}
+.br-sign-in.inverted, .br-sign-in.is-inverted, .br-sign-in[inverted],
+.br-button.sign-in.inverted,
+.br-button.sign-in.is-inverted,
+.br-button.sign-in[inverted] {
+    --background: var(--blue-warm-vivid-90);
+    --background-rgb: var(--blue-warm-vivid-90-rgb);
+    --background-alternative: var(--blue-warm-vivid-90);
+    --background-alternative-rgb: var(--blue-warm-vivid-90-rgb);
+    --border-color: var(--pure-0);
+    --color: var(--color-dark);
+    --color-rgb: var(--color-dark-rgb);
+    --text-color: var(--color);
+    --interactive: var(--interactive-dark);
+    --interactive-rgb: var(--interactive-dark-rgb);
+    --visited: var(--gray-20);
+    --hover: var(--surface-opacity-sm);
+    --pressed: var(--surface-opacity-lg);
+    --focus-color: var(--gold-vivid-20);
+    --focus: var(--gold-vivid-20);
+    --active: var(--pure-0);
+}
+.br-sign-in.danger, .br-sign-in[danger], .br-sign-in.is-danger,
+.br-button.sign-in.danger,
+.br-button.sign-in[danger],
+.br-button.sign-in.is-danger {
+    --hover: var(--surface-opacity-sm);
+    --pressed: var(--surface-opacity-lg);
+    background-color: var(--danger);
+    color: var(--background);
+}
+.br-sign-in.success, .br-sign-in[success], .br-sign-in.is-success,
+.br-button.sign-in.success,
+.br-button.sign-in[success],
+.br-button.sign-in.is-success {
+    --hover: var(--surface-opacity-sm);
+    --pressed: var(--surface-opacity-lg);
+    background-color: var(--success);
+    color: var(--background);
+}
+.br-sign-in.warning, .br-sign-in[warning], .br-sign-in.is-warning,
+.br-button.sign-in.warning,
+.br-button.sign-in[warning],
+.br-button.sign-in.is-warning {
+    --hover: var(--surface-opacity-sm);
+    --pressed: var(--surface-opacity-lg);
+    background-color: var(--warning);
+    --hover: var(--surface-opacity-xs);
+    --pressed: var(--surface-opacity-md);
+    color: var(--color);
+}
+.br-sign-in.info, .br-sign-in[info], .br-sign-in.is-info,
+.br-button.sign-in.info,
+.br-button.sign-in[info],
+.br-button.sign-in.is-info {
+    --hover: var(--surface-opacity-sm);
+    --pressed: var(--surface-opacity-lg);
+    background-color: var(--info);
+    color: var(--background);
+}
+.br-sign-in:disabled,
+.br-button.sign-in:disabled {
+    cursor: not-allowed;
+}
+.br-sign-in:not(:disabled):focus,
+.br-button.sign-in:not(:disabled):focus {
+    outline: none;
+}
+.br-sign-in:not(:disabled).focus-visible, .br-sign-in:not(:disabled):focus-visible,
+.br-button.sign-in:not(:disabled).focus-visible,
+.br-button.sign-in:not(:disabled):focus-visible {
+    outline-color: var(--focus);
+    outline-offset: var(--focus-offset);
+    outline-style: var(--focus-style);
+    outline-width: var(--focus-width);
+}
+.br-sign-in:not(:disabled):hover::after, .br-sign-in:not(:disabled).hover::after,
+.br-button.sign-in:not(:disabled):hover::after,
+.br-button.sign-in:not(:disabled).hover::after {
+    background: currentColor;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 10%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.br-sign-in:not(:disabled):active::after, .br-sign-in:not(:disabled).pressed::after,
+.br-button.sign-in:not(:disabled):active::after,
+.br-button.sign-in:not(:disabled).pressed::after {
+    background: currentColor;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 10%;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.br-sign-in.active, .br-sign-in.is-active, .br-sign-in[active],
+.br-button.sign-in.active,
+.br-button.sign-in.is-active,
+.br-button.sign-in[active] {
+    background-color: var(--active);
+    color: var(--background);
+}
+.br-sign-in.loading::after, .br-sign-in[loading]::after, .br-sign-in.is-loading::after,
+.br-button.sign-in.loading::after,
+.br-button.sign-in[loading]::after,
+.br-button.sign-in.is-loading::after {
+    border-color: var(--interactive) var(--interactive) transparent;
+    border-style: solid;
+}
+.br-sign-in.loading.primary::after, .br-sign-in.loading.danger::after, .br-sign-in.loading.success::after, .br-sign-in.loading.info::after, .br-sign-in[loading].primary::after, .br-sign-in[loading].danger::after, .br-sign-in[loading].success::after, .br-sign-in[loading].info::after, .br-sign-in.is-loading.primary::after, .br-sign-in.is-loading.danger::after, .br-sign-in.is-loading.success::after, .br-sign-in.is-loading.info::after,
+.br-button.sign-in.loading.primary::after,
+.br-button.sign-in.loading.danger::after,
+.br-button.sign-in.loading.success::after,
+.br-button.sign-in.loading.info::after,
+.br-button.sign-in[loading].primary::after,
+.br-button.sign-in[loading].danger::after,
+.br-button.sign-in[loading].success::after,
+.br-button.sign-in[loading].info::after,
+.br-button.sign-in.is-loading.primary::after,
+.br-button.sign-in.is-loading.danger::after,
+.br-button.sign-in.is-loading.success::after,
+.br-button.sign-in.is-loading.info::after {
+    border-color: var(--background) var(--background) transparent;
+}
+.br-sign-in img,
+.br-button.sign-in img {
+    max-height: 20px;
+}
+
+.instruction {
+	text-align: justify;
+}
+
+/*# sourceMappingURL=signin.css.map*/
