@@ -30,7 +30,8 @@ class HumanService(BaseService):
             'preciso de ajuda humana',
             'não estou conseguindo',
             'não entendi',
-            'quero falar com uma pessoa'
+            'quero falar com uma pessoa',
+            'quero falar com uma humano'
         ]
     
     def can_handle(self, text: str) -> bool:
