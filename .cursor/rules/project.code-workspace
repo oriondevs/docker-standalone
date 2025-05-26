@@ -1,0 +1,18 @@
+{
+    "folders": [
+        {
+            "path": "chatbot"
+        },
+        {
+            "path": "conf"
+        },
+        {
+            "path": "Dockerfiles"
+        }
+    ],
+    "settings": {
+        "files.associations": {
+            "*.env": "env"
+        }
+    }
+}
