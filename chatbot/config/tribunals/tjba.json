@@ -1,0 +1,64 @@
+{
+    "code": "tjba",
+    "name": "Tribunal de Justiça da Bahia",
+    "keywords": {
+        "tjba": [
+            "tjba",
+            "tribunal de justiça da bahia",
+            "justiça da bahia"
+        ],
+        "salvador": [
+            "salvador",
+            "comarca de salvador"
+        ],
+        "feira_de_santana": [
+            "feira de santana",
+            "comarca de feira de santana"
+        ],
+        "vitoria_da_conquista": [
+            "vitória da conquista",
+            "vitoria da conquista",
+            "comarca de vitória da conquista",
+            "comarca de vitoria da conquista"
+        ]
+    },
+    "units": {
+        "salvador": {
+            "name": "Comarca de Salvador",
+            "address": "Av. Joana Angélica, 1000, Nazaré, Salvador-BA",
+            "phone": "(71) 3372-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "feira_de_santana": {
+            "name": "Comarca de Feira de Santana",
+            "address": "Rua Marechal Deodoro, 200, Centro, Feira de Santana-BA",
+            "phone": "(75) 3223-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "vitoria_da_conquista": {
+            "name": "Comarca de Vitória da Conquista",
+            "address": "Av. Brumado, 300, Centro, Vitória da Conquista-BA",
+            "phone": "(77) 3421-4000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

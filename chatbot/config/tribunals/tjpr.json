@@ -1,0 +1,66 @@
+{
+    "code": "tjpr",
+    "name": "Tribunal de Justiça do Paraná",
+    "keywords": {
+        "tjpr": [
+            "tjpr",
+            "tribunal de justiça do paraná",
+            "tribunal de justiça do parana",
+            "justiça do paraná",
+            "justiça do parana"
+        ],
+        "curitiba": [
+            "curitiba",
+            "comarca de curitiba"
+        ],
+        "londrina": [
+            "londrina",
+            "comarca de londrina"
+        ],
+        "maringa": [
+            "maringá",
+            "maringa",
+            "comarca de maringá",
+            "comarca de maringa"
+        ]
+    },
+    "units": {
+        "curitiba": {
+            "name": "Comarca de Curitiba",
+            "address": "Av. Cândido de Abreu, 500, Centro Cívico, Curitiba-PR",
+            "phone": "(41) 3310-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "londrina": {
+            "name": "Comarca de Londrina",
+            "address": "Rua Senador Souza Naves, 300, Centro, Londrina-PR",
+            "phone": "(43) 3371-4000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "maringa": {
+            "name": "Comarca de Maringá",
+            "address": "Av. Advogado Horácio Raccanello Filho, 400, Centro, Maringá-PR",
+            "phone": "(44) 3220-3000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

@@ -1,0 +1,64 @@
+{
+    "code": "tjmg",
+    "name": "Tribunal de Justiça de Minas Gerais",
+    "keywords": {
+        "tjmg": [
+            "tjmg",
+            "tribunal de justiça de minas gerais",
+            "justiça de minas gerais"
+        ],
+        "belo_horizonte": [
+            "belo horizonte",
+            "comarca de belo horizonte"
+        ],
+        "uberlandia": [
+            "uberlândia",
+            "uberlandia",
+            "comarca de uberlândia",
+            "comarca de uberlandia"
+        ],
+        "juiz_de_fora": [
+            "juiz de fora",
+            "comarca de juiz de fora"
+        ]
+    },
+    "units": {
+        "belo_horizonte": {
+            "name": "Comarca de Belo Horizonte",
+            "address": "Av. Afonso Pena, 1420, Centro, Belo Horizonte-MG",
+            "phone": "(31) 3237-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "uberlandia": {
+            "name": "Comarca de Uberlândia",
+            "address": "Av. João Naves de Ávila, 1000, Centro, Uberlândia-MG",
+            "phone": "(34) 3239-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "juiz_de_fora": {
+            "name": "Comarca de Juiz de Fora",
+            "address": "Rua Santo Antônio, 200, Centro, Juiz de Fora-MG",
+            "phone": "(32) 3250-4000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

@@ -1,0 +1,68 @@
+{
+    "code": "tjdft",
+    "name": "Tribunal de Justiça do Distrito Federal e Territórios",
+    "keywords": {
+        "tjdft": [
+            "tjdft",
+            "tribunal de justiça do distrito federal e territórios",
+            "tribunal de justiça do distrito federal e territorios",
+            "justiça do distrito federal e territórios",
+            "justiça do distrito federal e territorios"
+        ],
+        "brasilia": [
+            "brasília",
+            "brasilia",
+            "comarca de brasília",
+            "comarca de brasilia"
+        ],
+        "taguatinga": [
+            "taguatinga",
+            "comarca de taguatinga"
+        ],
+        "ceilandia": [
+            "ceilândia",
+            "ceilandia",
+            "comarca de ceilândia",
+            "comarca de ceilandia"
+        ]
+    },
+    "units": {
+        "brasilia": {
+            "name": "Comarca de Brasília",
+            "address": "SAUN Quadra 5, Lote 1, Bloco C, Brasília-DF",
+            "phone": "(61) 3343-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "taguatinga": {
+            "name": "Comarca de Taguatinga",
+            "address": "Av. Principal, 200, Centro, Taguatinga-DF",
+            "phone": "(61) 3351-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "ceilandia": {
+            "name": "Comarca de Ceilândia",
+            "address": "Rua Principal, 300, Centro, Ceilândia-DF",
+            "phone": "(61) 3371-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

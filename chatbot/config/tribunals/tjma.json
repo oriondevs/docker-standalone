@@ -1,0 +1,66 @@
+{
+    "code": "tjma",
+    "name": "Tribunal de Justiça do Maranhão",
+    "keywords": {
+        "tjma": [
+            "tjma",
+            "tribunal de justiça do maranhão",
+            "tribunal de justiça do maranhao",
+            "justiça do maranhão",
+            "justiça do maranhao"
+        ],
+        "sao_luis": [
+            "são luís",
+            "sao luis",
+            "comarca de são luís",
+            "comarca de sao luis"
+        ],
+        "imperatriz": [
+            "imperatriz",
+            "comarca de imperatriz"
+        ],
+        "caxias": [
+            "caxias",
+            "comarca de caxias"
+        ]
+    },
+    "units": {
+        "sao_luis": {
+            "name": "Comarca de São Luís",
+            "address": "Av. Prof. Carlos Cunha, 1000, Calhau, São Luís-MA",
+            "phone": "(98) 3233-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "imperatriz": {
+            "name": "Comarca de Imperatriz",
+            "address": "Av. Principal, 200, Centro, Imperatriz-MA",
+            "phone": "(99) 3521-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "caxias": {
+            "name": "Comarca de Caxias",
+            "address": "Rua Principal, 300, Centro, Caxias-MA",
+            "phone": "(99) 3421-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

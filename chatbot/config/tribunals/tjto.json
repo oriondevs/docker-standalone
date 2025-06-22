@@ -1,0 +1,62 @@
+{
+    "code": "tjto",
+    "name": "Tribunal de Justiça do Tocantins",
+    "keywords": {
+        "tjto": [
+            "tjto",
+            "tribunal de justiça do tocantins",
+            "justiça do tocantins"
+        ],
+        "palmas": [
+            "palmas",
+            "comarca de palmas"
+        ],
+        "araguaina": [
+            "araguaina",
+            "comarca de araguaina"
+        ],
+        "gurupi": [
+            "gurupi",
+            "comarca de gurupi"
+        ]
+    },
+    "units": {
+        "palmas": {
+            "name": "Comarca de Palmas",
+            "address": "Av. Teotônio Segurado, 1000, Centro, Palmas-TO",
+            "phone": "(63) 3212-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "araguaina": {
+            "name": "Comarca de Araguaína",
+            "address": "Av. Principal, 200, Centro, Araguaína-TO",
+            "phone": "(63) 3421-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "gurupi": {
+            "name": "Comarca de Gurupi",
+            "address": "Rua Principal, 300, Centro, Gurupi-TO",
+            "phone": "(63) 3521-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

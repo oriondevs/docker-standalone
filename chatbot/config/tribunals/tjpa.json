@@ -1,0 +1,70 @@
+{
+    "code": "tjpa",
+    "name": "Tribunal de Justiça do Pará",
+    "keywords": {
+        "tjpa": [
+            "tjpa",
+            "tribunal de justiça do pará",
+            "tribunal de justiça do para",
+            "justiça do pará",
+            "justiça do para"
+        ],
+        "belem": [
+            "belém",
+            "belem",
+            "comarca de belém",
+            "comarca de belem"
+        ],
+        "santarem": [
+            "santarém",
+            "santarem",
+            "comarca de santarém",
+            "comarca de santarem"
+        ],
+        "maraba": [
+            "marabá",
+            "maraba",
+            "comarca de marabá",
+            "comarca de maraba"
+        ]
+    },
+    "units": {
+        "belem": {
+            "name": "Comarca de Belém",
+            "address": "Av. Almirante Barroso, 1000, Centro, Belém-PA",
+            "phone": "(91) 3205-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "santarem": {
+            "name": "Comarca de Santarém",
+            "address": "Av. Principal, 200, Centro, Santarém-PA",
+            "phone": "(93) 3521-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "maraba": {
+            "name": "Comarca de Marabá",
+            "address": "Rua Principal, 300, Centro, Marabá-PA",
+            "phone": "(94) 3321-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

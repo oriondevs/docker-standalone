@@ -1,0 +1,66 @@
+{
+    "code": "tjes",
+    "name": "Tribunal de Justiça do Espírito Santo",
+    "keywords": {
+        "tjes": [
+            "tjes",
+            "tribunal de justiça do espírito santo",
+            "tribunal de justiça do espirito santo",
+            "justiça do espírito santo",
+            "justiça do espirito santo"
+        ],
+        "vitoria": [
+            "vitória",
+            "vitoria",
+            "comarca de vitória",
+            "comarca de vitoria"
+        ],
+        "serra": [
+            "serra",
+            "comarca da serra"
+        ],
+        "vila_velha": [
+            "vila velha",
+            "comarca de vila velha"
+        ]
+    },
+    "units": {
+        "vitoria": {
+            "name": "Comarca de Vitória",
+            "address": "Av. Nossa Senhora dos Navegantes, 1000, Enseada do Suá, Vitória-ES",
+            "phone": "(27) 3332-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "serra": {
+            "name": "Comarca da Serra",
+            "address": "Av. Central, 200, Centro, Serra-ES",
+            "phone": "(27) 3338-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "vila_velha": {
+            "name": "Comarca de Vila Velha",
+            "address": "Rua Luciano das Neves, 300, Centro, Vila Velha-ES",
+            "phone": "(27) 3320-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

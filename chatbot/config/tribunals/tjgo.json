@@ -1,0 +1,68 @@
+{
+    "code": "tjgo",
+    "name": "Tribunal de Justiça de Goiás",
+    "keywords": {
+        "tjgo": [
+            "tjgo",
+            "tribunal de justiça de goiás",
+            "tribunal de justiça de goias",
+            "justiça de goiás",
+            "justiça de goias"
+        ],
+        "goiania": [
+            "goiânia",
+            "goiania",
+            "comarca de goiânia",
+            "comarca de goiania"
+        ],
+        "anapolis": [
+            "anápolis",
+            "anapolis",
+            "comarca de anápolis",
+            "comarca de anapolis"
+        ],
+        "rio_verde": [
+            "rio verde",
+            "comarca de rio verde"
+        ]
+    },
+    "units": {
+        "goiania": {
+            "name": "Comarca de Goiânia",
+            "address": "Av. Assis Chateaubriand, 1000, Setor Oeste, Goiânia-GO",
+            "phone": "(62) 3217-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "anapolis": {
+            "name": "Comarca de Anápolis",
+            "address": "Av. Brasil, 200, Centro, Anápolis-GO",
+            "phone": "(62) 3321-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "rio_verde": {
+            "name": "Comarca de Rio Verde",
+            "address": "Av. Pres. Vargas, 300, Centro, Rio Verde-GO",
+            "phone": "(64) 3621-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

@@ -1,0 +1,62 @@
+{
+    "code": "tjac",
+    "name": "Tribunal de Justiça do Acre",
+    "keywords": {
+        "tjac": [
+            "tjac",
+            "tribunal de justiça do acre",
+            "justiça do acre"
+        ],
+        "rio_branco": [
+            "rio branco",
+            "comarca de rio branco"
+        ],
+        "cruzeiro_do_sul": [
+            "cruzeiro do sul",
+            "comarca de cruzeiro do sul"
+        ],
+        "sena_madureira": [
+            "sena madureira",
+            "comarca de sena madureira"
+        ]
+    },
+    "units": {
+        "rio_branco": {
+            "name": "Comarca de Rio Branco",
+            "address": "Av. Getúlio Vargas, 1000, Centro, Rio Branco-AC",
+            "phone": "(68) 3212-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "cruzeiro_do_sul": {
+            "name": "Comarca de Cruzeiro do Sul",
+            "address": "Rua Principal, 200, Centro, Cruzeiro do Sul-AC",
+            "phone": "(68) 3321-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "sena_madureira": {
+            "name": "Comarca de Sena Madureira",
+            "address": "Av. Principal, 300, Centro, Sena Madureira-AC",
+            "phone": "(68) 3421-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

@@ -1,0 +1,64 @@
+{
+    "code": "tjce",
+    "name": "Tribunal de Justiça do Ceará",
+    "keywords": {
+        "tjce": [
+            "tjce",
+            "tribunal de justiça do ceará",
+            "tribunal de justiça do ceara",
+            "justiça do ceará",
+            "justiça do ceara"
+        ],
+        "fortaleza": [
+            "fortaleza",
+            "comarca de fortaleza"
+        ],
+        "juazeiro_do_norte": [
+            "juazeiro do norte",
+            "comarca de juazeiro do norte"
+        ],
+        "sobral": [
+            "sobral",
+            "comarca de sobral"
+        ]
+    },
+    "units": {
+        "fortaleza": {
+            "name": "Comarca de Fortaleza",
+            "address": "Av. General Afonso Albuquerque Lima, 1000, Cambeba, Fortaleza-CE",
+            "phone": "(85) 3207-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "juazeiro_do_norte": {
+            "name": "Comarca de Juazeiro do Norte",
+            "address": "Av. Principal, 200, Centro, Juazeiro do Norte-CE",
+            "phone": "(88) 3511-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "sobral": {
+            "name": "Comarca de Sobral",
+            "address": "Rua Principal, 300, Centro, Sobral-CE",
+            "phone": "(88) 3611-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

@@ -1,0 +1,68 @@
+{
+    "code": "tjmt",
+    "name": "Tribunal de Justiça de Mato Grosso",
+    "keywords": {
+        "tjmt": [
+            "tjmt",
+            "tribunal de justiça de mato grosso",
+            "justiça de mato grosso"
+        ],
+        "cuiaba": [
+            "cuiabá",
+            "cuiaba",
+            "comarca de cuiabá",
+            "comarca de cuiaba"
+        ],
+        "varzea_grande": [
+            "várzea grande",
+            "varzea grande",
+            "comarca de várzea grande",
+            "comarca de varzea grande"
+        ],
+        "rondonopolis": [
+            "rondonópolis",
+            "rondonopolis",
+            "comarca de rondonópolis",
+            "comarca de rondonopolis"
+        ]
+    },
+    "units": {
+        "cuiaba": {
+            "name": "Comarca de Cuiabá",
+            "address": "Av. Historiador Rubens de Mendonça, 1000, Centro, Cuiabá-MT",
+            "phone": "(65) 3617-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "varzea_grande": {
+            "name": "Comarca de Várzea Grande",
+            "address": "Av. Couto Magalhães, 200, Centro, Várzea Grande-MT",
+            "phone": "(65) 3681-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "rondonopolis": {
+            "name": "Comarca de Rondonópolis",
+            "address": "Av. Pres. Kennedy, 300, Centro, Rondonópolis-MT",
+            "phone": "(66) 3421-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

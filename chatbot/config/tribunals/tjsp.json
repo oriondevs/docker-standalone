@@ -1,0 +1,64 @@
+{
+    "code": "tjsp",
+    "name": "Tribunal de Justiça de São Paulo",
+    "keywords": {
+        "tjsp": [
+            "tjsp",
+            "tribunal de justiça de são paulo",
+            "justiça de são paulo"
+        ],
+        "sao_paulo": [
+            "são paulo",
+            "sao paulo",
+            "comarca de são paulo",
+            "comarca de sao paulo"
+        ],
+        "santos": [
+            "santos",
+            "comarca de santos"
+        ],
+        "campinas": [
+            "campinas",
+            "comarca de campinas"
+        ]
+    },
+    "units": {
+        "sao_paulo": {
+            "name": "Comarca de São Paulo",
+            "address": "Av. Liberdade, 100, Centro, São Paulo-SP",
+            "phone": "(11) 3105-6000",
+            "schedule": "Segunda a Sexta, das 8h às 18h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "santos": {
+            "name": "Comarca de Santos",
+            "address": "Rua Riachuelo, 200, Centro, Santos-SP",
+            "phone": "(13) 3202-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "campinas": {
+            "name": "Comarca de Campinas",
+            "address": "Av. Francisco Glicério, 300, Centro, Campinas-SP",
+            "phone": "(19) 3736-8000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

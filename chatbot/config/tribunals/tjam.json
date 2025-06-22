@@ -1,0 +1,62 @@
+{
+    "code": "tjam",
+    "name": "Tribunal de Justiça do Amazonas",
+    "keywords": {
+        "tjam": [
+            "tjam",
+            "tribunal de justiça do amazonas",
+            "justiça do amazonas"
+        ],
+        "manaus": [
+            "manaus",
+            "comarca de manaus"
+        ],
+        "parintins": [
+            "parintins",
+            "comarca de parintins"
+        ],
+        "itacoatiara": [
+            "itacoatiara",
+            "comarca de itacoatiara"
+        ]
+    },
+    "units": {
+        "manaus": {
+            "name": "Comarca de Manaus",
+            "address": "Av. André Araújo, 1000, Aleixo, Manaus-AM",
+            "phone": "(92) 3302-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "parintins": {
+            "name": "Comarca de Parintins",
+            "address": "Rua Principal, 200, Centro, Parintins-AM",
+            "phone": "(92) 3531-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "itacoatiara": {
+            "name": "Comarca de Itacoatiara",
+            "address": "Av. Principal, 300, Centro, Itacoatiara-AM",
+            "phone": "(92) 3521-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

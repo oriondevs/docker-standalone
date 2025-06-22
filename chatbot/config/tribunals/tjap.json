@@ -1,0 +1,66 @@
+{
+    "code": "tjap",
+    "name": "Tribunal de Justiça do Amapá",
+    "keywords": {
+        "tjap": [
+            "tjap",
+            "tribunal de justiça do amapá",
+            "tribunal de justiça do amapa",
+            "justiça do amapá",
+            "justiça do amapa"
+        ],
+        "macapa": [
+            "macapá",
+            "macapa",
+            "comarca de macapá",
+            "comarca de macapa"
+        ],
+        "santana": [
+            "santana",
+            "comarca de santana"
+        ],
+        "laranjal_do_jari": [
+            "laranjal do jari",
+            "comarca de laranjal do jari"
+        ]
+    },
+    "units": {
+        "macapa": {
+            "name": "Comarca de Macapá",
+            "address": "Av. FAB, 1000, Centro, Macapá-AP",
+            "phone": "(96) 3212-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "santana": {
+            "name": "Comarca de Santana",
+            "address": "Av. Principal, 200, Centro, Santana-AP",
+            "phone": "(96) 3281-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "laranjal_do_jari": {
+            "name": "Comarca de Laranjal do Jari",
+            "address": "Rua Principal, 300, Centro, Laranjal do Jari-AP",
+            "phone": "(96) 3521-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

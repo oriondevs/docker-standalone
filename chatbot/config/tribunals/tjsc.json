@@ -1,0 +1,64 @@
+{
+    "code": "tjsc",
+    "name": "Tribunal de Justiça de Santa Catarina",
+    "keywords": {
+        "tjsc": [
+            "tjsc",
+            "tribunal de justiça de santa catarina",
+            "justiça de santa catarina"
+        ],
+        "florianopolis": [
+            "florianópolis",
+            "florianopolis",
+            "comarca de florianópolis",
+            "comarca de florianopolis"
+        ],
+        "joinville": [
+            "joinville",
+            "comarca de joinville"
+        ],
+        "blumenau": [
+            "blumenau",
+            "comarca de blumenau"
+        ]
+    },
+    "units": {
+        "florianopolis": {
+            "name": "Comarca de Florianópolis",
+            "address": "Rua Álvaro de Andrade, 200, Centro, Florianópolis-SC",
+            "phone": "(48) 3216-4000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "joinville": {
+            "name": "Comarca de Joinville",
+            "address": "Rua Dr. João Colin, 300, Centro, Joinville-SC",
+            "phone": "(47) 3433-3000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "blumenau": {
+            "name": "Comarca de Blumenau",
+            "address": "Rua Dr. Amadeu da Luz, 400, Centro, Blumenau-SC",
+            "phone": "(47) 3326-2000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

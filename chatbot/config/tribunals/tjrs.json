@@ -1,0 +1,62 @@
+{
+    "code": "tjrs",
+    "name": "Tribunal de Justiça do Rio Grande do Sul",
+    "keywords": {
+        "tjrs": [
+            "tjrs",
+            "tribunal de justiça do rio grande do sul",
+            "justiça do rio grande do sul"
+        ],
+        "porto_alegre": [
+            "porto alegre",
+            "comarca de porto alegre"
+        ],
+        "caxias_do_sul": [
+            "caxias do sul",
+            "comarca de caxias do sul"
+        ],
+        "pelotas": [
+            "pelotas",
+            "comarca de pelotas"
+        ]
+    },
+    "units": {
+        "porto_alegre": {
+            "name": "Comarca de Porto Alegre",
+            "address": "Av. Borges de Medeiros, 1500, Centro, Porto Alegre-RS",
+            "phone": "(51) 3210-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "caxias_do_sul": {
+            "name": "Comarca de Caxias do Sul",
+            "address": "Rua Feijó Júnior, 300, Centro, Caxias do Sul-RS",
+            "phone": "(54) 3221-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "pelotas": {
+            "name": "Comarca de Pelotas",
+            "address": "Rua Félix da Cunha, 400, Centro, Pelotas-RS",
+            "phone": "(53) 3222-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

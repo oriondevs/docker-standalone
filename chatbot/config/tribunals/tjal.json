@@ -1,0 +1,66 @@
+{
+    "code": "tjal",
+    "name": "Tribunal de Justiça de Alagoas",
+    "keywords": {
+        "tjal": [
+            "tjal",
+            "tribunal de justiça de alagoas",
+            "justiça de alagoas"
+        ],
+        "maceio": [
+            "maceió",
+            "maceio",
+            "comarca de maceió",
+            "comarca de maceio"
+        ],
+        "arapiraca": [
+            "arapiraca",
+            "comarca de arapiraca"
+        ],
+        "palmeira_dos_indios": [
+            "palmeira dos índios",
+            "palmeira dos indios",
+            "comarca de palmeira dos índios",
+            "comarca de palmeira dos indios"
+        ]
+    },
+    "units": {
+        "maceio": {
+            "name": "Comarca de Maceió",
+            "address": "Av. da Paz, 1000, Centro, Maceió-AL",
+            "phone": "(82) 3315-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "arapiraca": {
+            "name": "Comarca de Arapiraca",
+            "address": "Av. Principal, 200, Centro, Arapiraca-AL",
+            "phone": "(82) 3521-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "palmeira_dos_indios": {
+            "name": "Comarca de Palmeira dos Índios",
+            "address": "Rua Principal, 300, Centro, Palmeira dos Índios-AL",
+            "phone": "(82) 3421-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

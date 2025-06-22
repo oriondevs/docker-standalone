@@ -1,0 +1,64 @@
+{
+    "code": "tjms",
+    "name": "Tribunal de Justiça de Mato Grosso do Sul",
+    "keywords": {
+        "tjms": [
+            "tjms",
+            "tribunal de justiça de mato grosso do sul",
+            "justiça de mato grosso do sul"
+        ],
+        "campo_grande": [
+            "campo grande",
+            "comarca de campo grande"
+        ],
+        "dourados": [
+            "dourados",
+            "comarca de dourados"
+        ],
+        "três_lagoas": [
+            "três lagoas",
+            "tres lagoas",
+            "comarca de três lagoas",
+            "comarca de tres lagoas"
+        ]
+    },
+    "units": {
+        "campo_grande": {
+            "name": "Comarca de Campo Grande",
+            "address": "Av. Mato Grosso, 1000, Centro, Campo Grande-MS",
+            "phone": "(67) 3317-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "dourados": {
+            "name": "Comarca de Dourados",
+            "address": "Rua Onofre Pereira de Matos, 200, Centro, Dourados-MS",
+            "phone": "(67) 3421-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "tres_lagoas": {
+            "name": "Comarca de Três Lagoas",
+            "address": "Av. Antônio Trajano, 300, Centro, Três Lagoas-MS",
+            "phone": "(67) 3521-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

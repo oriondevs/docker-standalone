@@ -1,0 +1,66 @@
+{
+    "code": "tjro",
+    "name": "Tribunal de Justiça de Rondônia",
+    "keywords": {
+        "tjro": [
+            "tjro",
+            "tribunal de justiça de rondônia",
+            "tribunal de justiça de rondonia",
+            "justiça de rondônia",
+            "justiça de rondonia"
+        ],
+        "porto_velho": [
+            "porto velho",
+            "comarca de porto velho"
+        ],
+        "ji_parana": [
+            "ji paraná",
+            "ji-paraná",
+            "comarca de ji paraná",
+            "comarca de ji-paraná"
+        ],
+        "ariquemes": [
+            "ariquemes",
+            "comarca de ariquemes"
+        ]
+    },
+    "units": {
+        "porto_velho": {
+            "name": "Comarca de Porto Velho",
+            "address": "Av. Rogério Weber, 1000, Centro, Porto Velho-RO",
+            "phone": "(69) 3212-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "ji_parana": {
+            "name": "Comarca de Ji-Paraná",
+            "address": "Av. Principal, 200, Centro, Ji-Paraná-RO",
+            "phone": "(69) 3421-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "ariquemes": {
+            "name": "Comarca de Ariquemes",
+            "address": "Rua Principal, 300, Centro, Ariquemes-RO",
+            "phone": "(69) 3521-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

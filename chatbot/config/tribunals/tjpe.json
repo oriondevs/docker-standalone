@@ -1,0 +1,46 @@
+{
+    "name": "Tribunal de Justiça de Pernambuco",
+    "code": "tjpe",
+    "units": {
+        "pesqueira": {
+            "name": "Comarca de Pesqueira",
+            "address": "Rua Dr. José Mariano, 123, Centro, Pesqueira-PE",
+            "phone": "(87) 3835-1234",
+            "schedule": "Segunda a Sexta, das 8h às 14h",
+            "services": ["Atendimento ao Público", "Protocolo", "Audiências"]
+        },
+        "recife": {
+            "name": "Comarca de Recife",
+            "address": "Av. Rui Barbosa, 500, Graças, Recife-PE",
+            "phone": "(81) 3182-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": ["Atendimento ao Público", "Protocolo", "Audiências", "Central de Mandados"]
+        },
+        "caruaru": {
+            "name": "Comarca de Caruaru",
+            "address": "Rua Coronel João Manguinhos, 100, Centro, Caruaru-PE",
+            "phone": "(81) 3719-9000",
+            "schedule": "Segunda a Sexta, das 8h às 14h",
+            "services": ["Atendimento ao Público", "Protocolo", "Audiências"]
+        }
+    },
+    "keywords": {
+        "tjpe": [
+            "tjpe",
+            "tribunal de justiça de pernambuco",
+            "justiça de pernambuco"
+        ],
+        "pesqueira": [
+            "pesqueira",
+            "comarca de pesqueira"
+        ],
+        "recife": [
+            "recife",
+            "comarca de recife"
+        ],
+        "caruaru": [
+            "caruaru",
+            "comarca de caruaru"
+        ]
+    }
+} 

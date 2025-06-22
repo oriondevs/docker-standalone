@@ -1,0 +1,66 @@
+{
+    "code": "tjpi",
+    "name": "Tribunal de Justiça do Piauí",
+    "keywords": {
+        "tjpi": [
+            "tjpi",
+            "tribunal de justiça do piauí",
+            "tribunal de justiça do piaui",
+            "justiça do piauí",
+            "justiça do piaui"
+        ],
+        "teresina": [
+            "teresina",
+            "comarca de teresina"
+        ],
+        "picos": [
+            "picos",
+            "comarca de picos"
+        ],
+        "parnaiba": [
+            "parnaíba",
+            "parnaiba",
+            "comarca de parnaíba",
+            "comarca de parnaiba"
+        ]
+    },
+    "units": {
+        "teresina": {
+            "name": "Comarca de Teresina",
+            "address": "Av. Miguel Rosa, 1000, Centro, Teresina-PI",
+            "phone": "(86) 3221-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "picos": {
+            "name": "Comarca de Picos",
+            "address": "Av. Principal, 200, Centro, Picos-PI",
+            "phone": "(89) 3421-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "parnaiba": {
+            "name": "Comarca de Parnaíba",
+            "address": "Rua Principal, 300, Centro, Parnaíba-PI",
+            "phone": "(86) 3321-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

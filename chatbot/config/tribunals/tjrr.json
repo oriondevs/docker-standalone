@@ -1,0 +1,66 @@
+{
+    "code": "tjrr",
+    "name": "Tribunal de Justiça de Roraima",
+    "keywords": {
+        "tjrr": [
+            "tjrr",
+            "tribunal de justiça de roraima",
+            "justiça de roraima"
+        ],
+        "boa_vista": [
+            "boa vista",
+            "comarca de boa vista"
+        ],
+        "caracarai": [
+            "caracaraí",
+            "caracarai",
+            "comarca de caracaraí",
+            "comarca de caracarai"
+        ],
+        "rorainopolis": [
+            "rorainópolis",
+            "rorainopolis",
+            "comarca de rorainópolis",
+            "comarca de rorainopolis"
+        ]
+    },
+    "units": {
+        "boa_vista": {
+            "name": "Comarca de Boa Vista",
+            "address": "Av. Santos Dumont, 1000, Centro, Boa Vista-RR",
+            "phone": "(95) 3621-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "caracarai": {
+            "name": "Comarca de Caracaraí",
+            "address": "Rua Principal, 200, Centro, Caracaraí-RR",
+            "phone": "(95) 3521-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "rorainopolis": {
+            "name": "Comarca de Rorainópolis",
+            "address": "Av. Principal, 300, Centro, Rorainópolis-RR",
+            "phone": "(95) 3421-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

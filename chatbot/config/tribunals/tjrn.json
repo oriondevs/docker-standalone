@@ -1,0 +1,64 @@
+{
+    "code": "tjrn",
+    "name": "Tribunal de Justiça do Rio Grande do Norte",
+    "keywords": {
+        "tjrn": [
+            "tjrn",
+            "tribunal de justiça do rio grande do norte",
+            "justiça do rio grande do norte"
+        ],
+        "natal": [
+            "natal",
+            "comarca de natal"
+        ],
+        "mossoro": [
+            "mossoró",
+            "mossoro",
+            "comarca de mossoró",
+            "comarca de mossoro"
+        ],
+        "parnamirim": [
+            "parnamirim",
+            "comarca de parnamirim"
+        ]
+    },
+    "units": {
+        "natal": {
+            "name": "Comarca de Natal",
+            "address": "Av. Hermes da Fonseca, 1000, Tirol, Natal-RN",
+            "phone": "(84) 3616-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "mossoro": {
+            "name": "Comarca de Mossoró",
+            "address": "Rua Cel. João Estevão, 200, Centro, Mossoró-RN",
+            "phone": "(84) 3315-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "parnamirim": {
+            "name": "Comarca de Parnamirim",
+            "address": "Av. Brigadeiro Everaldo Breves, 300, Centro, Parnamirim-RN",
+            "phone": "(84) 3644-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 

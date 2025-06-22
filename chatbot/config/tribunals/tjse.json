@@ -1,0 +1,62 @@
+{
+    "code": "tjse",
+    "name": "Tribunal de Justiça de Sergipe",
+    "keywords": {
+        "tjse": [
+            "tjse",
+            "tribunal de justiça de sergipe",
+            "justiça de sergipe"
+        ],
+        "aracaju": [
+            "aracaju",
+            "comarca de aracaju"
+        ],
+        "lagarto": [
+            "lagarto",
+            "comarca de lagarto"
+        ],
+        "itabaiana": [
+            "itabaiana",
+            "comarca de itabaiana"
+        ]
+    },
+    "units": {
+        "aracaju": {
+            "name": "Comarca de Aracaju",
+            "address": "Av. Heráclito Rollemberg, 1000, Centro, Aracaju-SE",
+            "phone": "(79) 3209-7000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados",
+                "Central de Execuções"
+            ]
+        },
+        "lagarto": {
+            "name": "Comarca de Lagarto",
+            "address": "Av. Principal, 200, Centro, Lagarto-SE",
+            "phone": "(79) 3631-6000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        },
+        "itabaiana": {
+            "name": "Comarca de Itabaiana",
+            "address": "Rua Principal, 300, Centro, Itabaiana-SE",
+            "phone": "(79) 3431-5000",
+            "schedule": "Segunda a Sexta, das 8h às 17h",
+            "services": [
+                "Atendimento ao Público",
+                "Protocolo",
+                "Audiências",
+                "Central de Mandados"
+            ]
+        }
+    }
+} 
