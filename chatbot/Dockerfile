@@ -25,4 +25,4 @@ RUN uv run spacy download en_core_web_sm
 EXPOSE 8000
 
 # Comando para iniciar a aplicação usando uv run
-CMD ["uv", "run", "main.py", "--mode", "api"]
+CMD ["uv", "run", "main.py", "--mode", "api", "--host", "0.0.0.0", "--port", "8000"]

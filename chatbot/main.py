@@ -7,6 +7,7 @@ from handle_conversations import get_all_conversations
 from services.service_manager import ServiceManager
 from services.process_service import ProcessService
 from services.human_service import HumanService
+from services.lhc_service import LHCService
 import uuid
 import os
 from dotenv import load_dotenv
@@ -90,13 +91,18 @@ def _train_chatbot(chatbot):
     # Train with specific conversations
     list_trainer.train(legal_conversations)
 
-def setup_services() -> ServiceManager:
+def setup_services(chatbot: ChatBot) -> ServiceManager:
     """Configura e retorna o gerenciador de serviços"""
     service_manager = ServiceManager()
     
     # Registra os serviços disponíveis
     service_manager.register_service(ProcessService())
     service_manager.register_service(HumanService())
+    
+    # Registra o serviço LHC
+    lhc_service = LHCService(chatbot)
+    service_manager.register_lhc_service(lhc_service)
+    
     # Aqui você pode registrar outros serviços
     # service_manager.register_service(CertificateService())
     # service_manager.register_service(DeadlineService())
@@ -108,7 +114,7 @@ def run_cli():
     """Executa o chatbot no modo CLI"""
     print("Inicializando chatbot do Poder Judiciário...")
     chatbot = create_and_train_bot()
-    service_manager = setup_services()
+    service_manager = setup_services(chatbot)
     print("Chatbot está pronto! Digite 'sair' para encerrar.")
     print("Como eu posso ajudar você hoje?")
     
