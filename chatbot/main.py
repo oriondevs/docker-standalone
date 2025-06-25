@@ -7,7 +7,6 @@ from handle_conversations import get_all_conversations
 from services.service_manager import ServiceManager
 from services.process_service import ProcessService
 from services.human_service import HumanService
-from services.lhc_service import LHCService
 import uuid
 import os
 from dotenv import load_dotenv
@@ -98,10 +97,6 @@ def setup_services(chatbot: ChatBot) -> ServiceManager:
     # Registra os serviços disponíveis
     service_manager.register_service(ProcessService())
     service_manager.register_service(HumanService())
-    
-    # Registra o serviço LHC
-    lhc_service = LHCService(chatbot)
-    service_manager.register_lhc_service(lhc_service)
     
     # Aqui você pode registrar outros serviços
     # service_manager.register_service(CertificateService())

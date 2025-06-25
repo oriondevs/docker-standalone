@@ -5,7 +5,6 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 from .base_service import BaseService
-from .jitsi_service import JitsiService
 
 # Carrega variáveis de ambiente
 load_dotenv(override=True)
@@ -15,11 +14,6 @@ class HumanService(BaseService):
     
     def __init__(self):
         super().__init__()
-        # Inicializa o serviço do Jitsi
-        self.jitsi_service = JitsiService(
-            domain=os.getenv("JITSI_DOMAIN", "meet.jus.br"),
-            api_key=os.getenv("JITSI_API_KEY")
-        )
         # Palavras-chave para identificar solicitações de atendente humano
         self.keywords = [
             'falar com atendente',
@@ -124,11 +118,6 @@ class HumanService(BaseService):
                     tribunal_data = self.tribunals[state["tribunal_code"]]
                     unit_data = tribunal_data['units'].get(state["unit_code"], {})
                     subject = f"Atendimento {unit_data.get('name', tribunal_data['name'])}"
-                    
-                    # meeting = self.jitsi_service.create_meeting_room(
-                    #     user_id=user_id,
-                    #     subject=subject
-                    # )
                     
                     # Limpar estado
                     self.clear_user_state(user_id)

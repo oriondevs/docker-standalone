@@ -211,54 +211,6 @@ async def whatsapp_webhook(request: Request):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/webhook/lhc")
-async def lhc_webhook(request: Request):
-    """
-    Endpoint para receber webhooks do Live Helper Chat
-    """
-    try:
-        data = await request.json()
-        
-        # Processa o webhook do LHC
-        success = service_manager.handle_lhc_webhook(data)
-        
-        if success:
-            return {"status": "success", "message": "Webhook processado com sucesso"}
-        else:
-            return {"status": "ignored", "message": "Webhook ignorado"}
-            
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/lhc/stats")
-async def lhc_stats():
-    """
-    Endpoint para obter estatísticas do LHC
-    """
-    try:
-        lhc_service = service_manager.get_lhc_service()
-        if lhc_service:
-            return lhc_service.get_chat_stats()
-        else:
-            return {"error": "Serviço LHC não disponível"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.get("/lhc/connection")
-async def lhc_connection():
-    """
-    Endpoint para testar conexão com LHC
-    """
-    try:
-        lhc_service = service_manager.get_lhc_service()
-        if lhc_service:
-            is_connected = lhc_service.test_lhc_connection()
-            return {"connected": is_connected}
-        else:
-            return {"error": "Serviço LHC não disponível"}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
 @app.get("/health")
 async def health_check():
     """
