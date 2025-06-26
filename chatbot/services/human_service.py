@@ -19,6 +19,8 @@ class HumanService(BaseService):
             'falar com atendente',
             'falar com humano',
             'atendente humano',
+            'atendente operador',
+            'falar com operador',
             'atendente real',
             'pessoa real',
             'transferir para atendente',
@@ -126,13 +128,7 @@ class HumanService(BaseService):
                     
                     return (
                         f"Entendi! Vou conectar você a um atendente da {unit_data.get('name', tribunal_data['name'])}. "
-                        # f"Por favor, acesse o link: {meeting['room_url']}\n"
-                        f"Por favor, acesse o link: https://reuniao.com/saz-keci-icq\n"
-                        f"Um atendente entrará na sala em instantes.\n\n"
-                        f"Dicas:\n"
-                        f"- Use fones de ouvido para melhor qualidade de áudio\n"
-                        f"- Verifique se sua câmera e microfone estão funcionando\n"
-                        f"- Aguarde o atendente entrar na sala",
+                        f"Um atendente entrará na sala em instantes.\n",
                         True,
                         205  # Transferência para atendente humano
                     )
