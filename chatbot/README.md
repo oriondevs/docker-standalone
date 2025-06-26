@@ -14,6 +14,7 @@ Um chatbot especializado em fornecer informações sobre os sistemas do CNJ (Con
 │       ├── sistemas.csv      # Conversas sobre sistemas do CNJ
 │       └── geral.csv         # Conversas gerais
 ├── main.py                   # Arquivo principal do chatbot
+├── api.py                    # API REST do chatbot
 ├── handle_conversations.py   # Gerenciador de conversas
 ├── pyproject.toml           # Configuração do projeto e dependências
 └── README.md                # Este arquivo
@@ -23,6 +24,7 @@ Um chatbot especializado em fornecer informações sobre os sistemas do CNJ (Con
 
 - Python 3.12 ou superior
 - MongoDB 4.4 ou superior
+- Redis (para controle de polling do Telegram)
 - Navegador web atualizado
 
 ## Configuração
@@ -61,9 +63,16 @@ Um chatbot especializado em fornecer informações sobre os sistemas do CNJ (Con
 5. Configure as variáveis de ambiente:
    Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
    ```
+   TELEGRAM_API_URL=https://api.telegram.org/bot
+   TELEGRAM_BOT_TOKEN=seu_token_aqui
+   
    MONGO_HOST=localhost
    MONGO_PORT=27017
    MONGO_DB=cnj-chatbot
+   
+   REDIS_HOST=localhost
+   REDIS_PORT=6379
+   REDIS_PASSWORD=password
    ```
 
 6. Baixe os modelos necessários do spaCy:
@@ -74,14 +83,73 @@ Um chatbot especializado em fornecer informações sobre os sistemas do CNJ (Con
 
 ## Uso
 
-1. Execute o chatbot:
+### Modo CLI
+1. Execute o chatbot no modo CLI:
    ```bash
-   python main.py
+   python main.py --mode cli
    ```
 
 2. O chatbot irá inicializar e treinar-se usando as conversas dos arquivos CSV.
 
 3. Digite 'sair' para encerrar a conversa.
+
+### Modo API
+1. Execute o chatbot no modo API:
+   ```bash
+   python main.py --mode api --host 0.0.0.0 --port 8000
+   ```
+
+2. A API estará disponível em `http://localhost:8000`
+
+3. Acesse a documentação automática em `http://localhost:8000/docs`
+
+## API REST
+
+### Endpoint `/chat`
+
+**POST** `/chat`
+
+Envia uma mensagem ao chatbot e recebe uma resposta.
+
+**Request Body:**
+```json
+{
+  "message": "Olá, como posso consultar um processo?",
+  "user_id": "user123"  // opcional
+}
+```
+
+**Response:**
+```json
+{
+  "response": "Para consultar um processo, você precisa informar o número do processo no formato CNJ.",
+  "confidence": 0.95,
+  "response_id": "response_123",
+  "question_id": "question_456",
+  "status": 200
+}
+```
+
+#### Códigos de Status
+
+O campo `status` na resposta indica o tipo de resposta:
+
+- **200**: Resposta normal do chatbot
+- **204**: Conversa finalizada pelo bot (ex: usuário disse "sair")
+- **205**: Transferência para atendente humano (ex: usuário solicitou atendente)
+
+### Endpoint `/health`
+
+**GET** `/health`
+
+Verifica se a API está funcionando.
+
+**Response:**
+```json
+{
+  "status": "healthy"
+}
+```
 
 ## Estrutura de Conversas
 
@@ -121,6 +189,7 @@ Qual é o status do processo?,Para verificar o status do processo, preciso do n�
 - fastapi: Framework web para API
 - uvicorn: Servidor ASGI
 - python-dotenv: Gerenciamento de variáveis de ambiente
+- redis: Cache e controle de polling
 
 ## Desenvolvimento Local
 
@@ -135,6 +204,7 @@ docker-compose up --build
 Isso irá iniciar:
 - O chatbot na porta 8000
 - MongoDB na porta 27017
+- Redis na porta 6379
 - Jitsi Meet na porta 8443 (https://localhost:8443)
 
 Para testar o chatbot com a integração do Jitsi:

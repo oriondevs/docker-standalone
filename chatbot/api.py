@@ -53,11 +53,56 @@ class ChatResponse(BaseModel):
     confidence: float
     response_id: str
     question_id: str
+    status: int
+
+def determine_response_status(response_text: str, response_id: str = "") -> int:
+    """
+    Determina o status da resposta baseado no conteúdo e ID da resposta
+    
+    Returns:
+        - 200: Resposta normal do chatbot
+        - 204: Conversa finalizada pelo bot
+        - 205: Transferência para atendente humano
+    """
+    response_lower = response_text.lower()
+    
+    # Verifica se é transferência para atendente humano
+    human_transfer_keywords = [
+        "conectar você a um atendente",
+        "acesse o link",
+        "sala de atendimento",
+        "atendente entrará na sala",
+        "reuniao.com"
+    ]
+    
+    if any(keyword in response_lower for keyword in human_transfer_keywords) or response_id == "human_transfer":
+        return 205
+    
+    # Verifica se é finalização da conversa
+    end_conversation_keywords = [
+        "até logo",
+        "obrigado por utilizar",
+        "tchau",
+        "até a próxima",
+        "encerrando",
+        "finalizando"
+    ]
+    
+    if any(keyword in response_lower for keyword in end_conversation_keywords) or response_id == "conversation_end":
+        return 204
+    
+    # Resposta normal
+    return 200
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(request: ChatRequest):
     """
     Endpoint para enviar mensagens ao chatbot e receber respostas
+    
+    Status codes:
+    - 200: Resposta normal do chatbot
+    - 204: Conversa finalizada pelo bot
+    - 205: Transferência para atendente humano
     """
     try:
         # Gera um ID de usuário se não foi fornecido
@@ -67,11 +112,26 @@ async def chat(request: ChatRequest):
         service_response, continue_service = service_manager.handle_message(user_id, request.message)
         
         if service_response:
+            # Determina o status baseado na resposta do serviço
+            status = determine_response_status(service_response)
+            
+            # Define o response_id baseado no status
+            if status == 205:
+                response_id = "human_transfer"
+                question_id = "human_transfer_request"
+            elif status == 204:
+                response_id = "conversation_end"
+                question_id = "conversation_end"
+            else:
+                response_id = "service_response"
+                question_id = "unknown_question"
+            
             return ChatResponse(
                 response=service_response,
                 confidence=1.0 if not continue_service else 0.8,
-                response_id="service_response",
-                question_id="unknown_question"
+                response_id=response_id,
+                question_id=question_id,
+                status=status
             )
         
         # Se nenhum serviço respondeu, usa o ChatterBot
@@ -84,12 +144,16 @@ async def chat(request: ChatRequest):
         # Obtém o ID da resposta
         response_statements = list(chatbot.storage.filter(text=str(response)))
         response_id = str(response_statements[0].id) if response_statements else "unknown_response"
+        
+        # Determina o status baseado na resposta do ChatterBot
+        status = determine_response_status(str(response), response_id)
             
         return ChatResponse(
             response=str(response),
             confidence=float(response.confidence),
             response_id=response_id,
-            question_id=question_id
+            question_id=question_id,
+            status=status
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
