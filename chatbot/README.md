@@ -73,6 +73,9 @@ Um chatbot especializado em fornecer informações sobre os sistemas do CNJ (Con
    REDIS_HOST=localhost
    REDIS_PORT=6379
    REDIS_PASSWORD=password
+   
+   # Configuração de timeout de sessão (em minutos)
+   SESSION_TIMEOUT_MINUTES=15
    ```
 
 6. Baixe os modelos necessários do spaCy:
@@ -136,12 +139,21 @@ Envia uma mensagem ao chatbot e recebe uma resposta.
 O campo `status` na resposta indica o tipo de resposta:
 
 - **200**: Resposta normal do chatbot
-- **204**: Conversa finalizada pelo bot (ex: usuário disse "sair")
-- **205**: Transferência para atendente humano (ex: usuário solicitou atendente)
+- **204**: Conversa finalizada pelo bot (timeout de inatividade ou comando de saída)
+- **205**: Transferência para atendente humano
 
 #### Session ID
 
 O campo `session_id` contém um UUID único que identifica a sessão de conversa do usuário. O mesmo `session_id` será retornado para todas as mensagens do mesmo `user_id` durante a sessão.
+
+#### Timeout de Sessão
+
+O sistema possui um mecanismo de timeout que encerra automaticamente a sessão após um período de inatividade. Por padrão, o timeout é de 15 minutos, mas pode ser configurado através da variável de ambiente `SESSION_TIMEOUT_MINUTES`.
+
+Quando uma sessão expira por timeout:
+- O status retornado é **204** (conversa finalizada)
+- A sessão é limpa automaticamente
+- O usuário precisa enviar uma nova mensagem para iniciar uma nova sessão
 
 ### Endpoint `/health`
 

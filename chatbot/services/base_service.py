@@ -15,9 +15,13 @@ class BaseService(ABC):
         pass
     
     @abstractmethod
-    def handle(self, user_id: str, text: str) -> Tuple[str, bool]:
+    def handle(self, user_id: str, text: str) -> Tuple[str, bool, int]:
         """
-        Processa a mensagem e retorna (resposta, se_continua_conversa)
+        Processa a mensagem e retorna (resposta, se_continua_conversa, status)
+        Status codes:
+        - 200: Resposta normal
+        - 204: Conversa finalizada
+        - 205: Transferência para atendente humano
         """
         pass
     

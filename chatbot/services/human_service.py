@@ -77,7 +77,7 @@ class HumanService(BaseService):
         # Verifica se contém palavras-chave de transferência
         return any(keyword in text.lower() for keyword in self.keywords)
     
-    def handle(self, user_id: str, text: str) -> Tuple[str, bool]:
+    def handle(self, user_id: str, text: str) -> Tuple[str, bool, int]:
         """Processa a solicitação de atendente humano"""
         state = self.get_user_state(user_id)
         
@@ -98,7 +98,8 @@ class HumanService(BaseService):
                     f"Horário de atendimento: {unit_data.get('schedule', 'Não especificado')}\n\n"
                     "Antes de transferir, gostaria de confirmar: você realmente precisa falar com um atendente? "
                     "Posso tentar te ajudar primeiro.",
-                    True
+                    True,
+                    200
                 )
             else:
                 # Lista tribunais disponíveis
@@ -107,7 +108,8 @@ class HumanService(BaseService):
                     "Desculpe, não identifiquei qual tribunal você deseja. "
                     "Por favor, escolha um dos seguintes tribunais:\n"
                     f"{tribunals_list}",
-                    True
+                    True,
+                    200
                 )
         
         # Se já está esperando confirmação
@@ -131,26 +133,30 @@ class HumanService(BaseService):
                         f"- Use fones de ouvido para melhor qualidade de áudio\n"
                         f"- Verifique se sua câmera e microfone estão funcionando\n"
                         f"- Aguarde o atendente entrar na sala",
-                        True
+                        True,
+                        205  # Transferência para atendente humano
                     )
                 except Exception as e:
                     return (
                         f"Desculpe, tivemos um problema ao criar a sala de atendimento. "
                         f"Por favor, tente novamente em alguns minutos.",
-                        False
+                        False,
+                        200
                     )
             elif self._is_negative(text):
                 # Limpa o estado da conversa
                 self.clear_user_state(user_id)
                 return (
                     "Ok, vou continuar te ajudando. Como posso ser útil?",
-                    False
+                    False,
+                    200
                 )
             else:
                 return (
                     "Desculpe, não entendi. Você gostaria de falar com um atendente humano? "
                     "Por favor, responda com 'sim' ou 'não'.",
-                    True
+                    True,
+                    200
                 )
         
         # Se é uma nova solicitação de atendente
@@ -170,7 +176,8 @@ class HumanService(BaseService):
                     f"Horário de atendimento: {unit_data.get('schedule', 'Não especificado')}\n\n"
                     "Antes de transferir, gostaria de confirmar: você realmente precisa falar com um atendente? "
                     "Posso tentar te ajudar primeiro.",
-                    True
+                    True,
+                    200
                 )
             else:
                 state["waiting_for_tribunal"] = True
@@ -179,10 +186,11 @@ class HumanService(BaseService):
                 return (
                     "Entendi que você gostaria de falar com um atendente humano. "
                     "Por favor, qual tribunal você deseja falar?:\n",
-                    True
+                    True,
+                    200
                 )
         
-        return "", False
+        return "", False, 200
     
     def _is_transfer_request(self, text: str) -> bool:
         """Verifica se o texto é uma solicitação de transferência"""

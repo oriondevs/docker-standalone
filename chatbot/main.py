@@ -124,7 +124,7 @@ def run_cli():
             
         try:
             # Primeiro, tenta processar com os serviços
-            service_response, continue_service = service_manager.handle_message(user_id, user_input)
+            service_response, continue_service, status = service_manager.handle_message(user_id, user_input)
             
             if service_response:
                 print(f"Bot: {service_response}")

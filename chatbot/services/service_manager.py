@@ -11,15 +11,15 @@ class ServiceManager:
         """Registra um novo serviço"""
         self.services.append(service)
         
-    def handle_message(self, user_id: str, text: str) -> Tuple[str, bool]:
+    def handle_message(self, user_id: str, text: str) -> Tuple[str, bool, int]:
         """
         Processa a mensagem através de todos os serviços registrados
         Retorna a primeira resposta não vazia ou uma resposta vazia se nenhum serviço puder lidar
         """
         for service in self.services:
             if service.can_handle(text):
-                response, continue_conversation = service.handle(user_id, text)
+                response, continue_conversation, status = service.handle(user_id, text)
                 if response:
-                    return response, continue_conversation
+                    return response, continue_conversation, status
         
-        return "", False
+        return "", False, 200

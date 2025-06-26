@@ -38,7 +38,7 @@ class ProcessService(BaseService):
         # Verifica se contém palavras-chave de processo
         return any(keyword in text.lower() for keyword in self.keywords)
     
-    def handle(self, user_id: str, text: str) -> Tuple[str, bool]:
+    def handle(self, user_id: str, text: str) -> Tuple[str, bool, int]:
         """Processa a consulta de processo"""
         state = self.get_user_state(user_id)
         
@@ -47,7 +47,7 @@ class ProcessService(BaseService):
             # Verifica se é um comando de cancelamento
             if self._is_cancel_command(text):
                 self.clear_user_state(user_id)
-                return "Consulta de processo cancelada. Como posso ajudar?", False
+                return "Consulta de processo cancelada. Como posso ajudar?", False, 200
                 
             process_number = self._extract_process_number(text)
             if process_number and self._validate_process_number(process_number):
@@ -63,22 +63,24 @@ class ProcessService(BaseService):
                     f"Status: {process_info['status']}\n"
                     f"Última movimentação: {process_info['ultima_movimentacao']}\n"
                     f"Tribunal: {process_info['tribunal']}",
-                    False
+                    False,
+                    200
                 )
             else:
                 return (
                     "Desculpe, não consegui identificar um número de processo válido. "
                     "Por favor, informe o número do processo no formato: 0000000-00.0000.0.00.0000\n"
                     "Ou digite 'cancelar' ou 'sair' para sair da consulta.",
-                    True
+                    True,
+                    200
                 )
         
         # Se é uma nova consulta de processo
         if self._is_process_query(text):
             state["waiting_for_process"] = True
-            return "Por favor, informe o número do processo que deseja consultar. Digite 'cancelar' ou 'sair' para sair da consulta.", True
+            return "Por favor, informe o número do processo que deseja consultar. Digite 'cancelar' ou 'sair' para sair da consulta.", True, 200
         
-        return "", False
+        return "", False, 200
     
     def _is_process_query(self, text: str) -> bool:
         """Verifica se o texto é uma consulta de processo"""
