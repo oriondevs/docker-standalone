@@ -5,6 +5,7 @@ from typing import Optional
 from main import create_and_train_bot, setup_services
 from adapters.telegram_adapter import TelegramAdapter
 import logging
+import uuid
 
 app = FastAPI(
     title="CNJ Chatbot API",
@@ -25,6 +26,9 @@ app.add_middleware(
 chatbot = create_and_train_bot()
 service_manager = setup_services(chatbot)
 telegram = TelegramAdapter()
+
+# Cache para armazenar session_ids por user_id
+session_cache = {}
 
 logging.info("Chatbot inicializado com sucesso")
 
@@ -54,6 +58,15 @@ class ChatResponse(BaseModel):
     response_id: str
     question_id: str
     status: int
+    session_id: str
+
+def get_or_create_session_id(user_id: str) -> str:
+    """
+    Obtém ou cria um session_id para o user_id
+    """
+    if user_id not in session_cache:
+        session_cache[user_id] = str(uuid.uuid4())
+    return session_cache[user_id]
 
 def determine_response_status(response_text: str, response_id: str = "") -> int:
     """
@@ -108,6 +121,9 @@ async def chat(request: ChatRequest):
         # Gera um ID de usuário se não foi fornecido
         user_id = request.user_id or "default_user"
         
+        # Obtém ou cria o session_id para o usuário
+        session_id = get_or_create_session_id(user_id)
+        
         # Primeiro, tenta processar com os serviços
         service_response, continue_service = service_manager.handle_message(user_id, request.message)
         
@@ -131,7 +147,8 @@ async def chat(request: ChatRequest):
                 confidence=1.0 if not continue_service else 0.8,
                 response_id=response_id,
                 question_id=question_id,
-                status=status
+                status=status,
+                session_id=session_id
             )
         
         # Se nenhum serviço respondeu, usa o ChatterBot
@@ -153,7 +170,8 @@ async def chat(request: ChatRequest):
             confidence=float(response.confidence),
             response_id=response_id,
             question_id=question_id,
-            status=status
+            status=status,
+            session_id=session_id
         )
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))

@@ -126,7 +126,8 @@ Envia uma mensagem ao chatbot e recebe uma resposta.
   "confidence": 0.95,
   "response_id": "response_123",
   "question_id": "question_456",
-  "status": 200
+  "status": 200,
+  "session_id": "550e8400-e29b-41d4-a716-446655440000"
 }
 ```
 
@@ -137,6 +138,10 @@ O campo `status` na resposta indica o tipo de resposta:
 - **200**: Resposta normal do chatbot
 - **204**: Conversa finalizada pelo bot (ex: usuário disse "sair")
 - **205**: Transferência para atendente humano (ex: usuário solicitou atendente)
+
+#### Session ID
+
+O campo `session_id` contém um UUID único que identifica a sessão de conversa do usuário. O mesmo `session_id` será retornado para todas as mensagens do mesmo `user_id` durante a sessão.
 
 ### Endpoint `/health`
 
